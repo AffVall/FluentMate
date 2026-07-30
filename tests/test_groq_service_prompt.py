@@ -63,7 +63,8 @@ class PromptTests(unittest.TestCase):
         self.assertNotIn("📝 TEXTO CORRIGIDO:", CLARIFICATION_PROMPT)
 
     def test_clarification_prompt_no_exercises(self):
-        self.assertIn("Não adicione exercícios", CLARIFICATION_PROMPT)
+        self.assertNotIn("exercício", CLARIFICATION_PROMPT.lower())
+        self.assertNotIn("exercícios", CLARIFICATION_PROMPT.lower())
 
     def test_get_prompt_returns_correct_prompt(self):
         self.assertEqual(get_prompt("standard"), STANDARD_PROMPT)
