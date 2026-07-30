@@ -58,8 +58,8 @@ class ClarificationPromptTests(unittest.TestCase):
     def test_explains_grammar(self):
         self.assertIn("grammar structures", CLARIFICATION_PROMPT)
 
-    def test_translates_3_uncommon_words(self):
-        self.assertIn("3 most uncommon", CLARIFICATION_PROMPT)
+    def test_simple_message_fallback(self):
+        self.assertIn("Essa mensagem é bem simples!", CLARIFICATION_PROMPT)
 
     def test_no_corrected_text(self):
         self.assertNotIn("📝 TEXTO CORRIGIDO:", CLARIFICATION_PROMPT)
