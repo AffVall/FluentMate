@@ -50,13 +50,17 @@ class PromptTests(unittest.TestCase):
     def test_standard_prompt_forbids_extra_sections(self):
         self.assertIn("Only three top-level sections", STANDARD_PROMPT)
 
-    def test_clarification_prompt_shows_english_first(self):
-        self.assertIn("MENSAGEM EM INGLÊS", CLARIFICATION_PROMPT)
-        self.assertIn("repita a frase em inglês", CLARIFICATION_PROMPT)
+    def test_clarification_prompt_shows_translation(self):
+        self.assertIn("CONVERSA", CLARIFICATION_PROMPT)
+        self.assertIn("Tradução da mensagem anterior", CLARIFICATION_PROMPT)
 
-    def test_clarification_prompt_explains_in_portuguese(self):
-        self.assertIn("EXPLICAÇÃO EM PORTUGUÊS", CLARIFICATION_PROMPT)
-        self.assertIn("português", CLARIFICATION_PROMPT)
+    def test_clarification_prompt_explains_english(self):
+        self.assertIn("EXPLICAÇÃO", CLARIFICATION_PROMPT)
+        self.assertIn("gramática", CLARIFICATION_PROMPT)
+        self.assertIn("vocabulário", CLARIFICATION_PROMPT)
+
+    def test_clarification_prompt_no_corrected_text(self):
+        self.assertNotIn("📝 TEXTO CORRIGIDO:", CLARIFICATION_PROMPT)
 
     def test_clarification_prompt_no_exercises(self):
         self.assertIn("Não adicione exercícios", CLARIFICATION_PROMPT)
