@@ -499,7 +499,7 @@ class ChatPanel(ctk.CTkFrame):
             if intent == "clarification":
                 prev = self._last_assistant_msg(session)
                 api_messages = [
-                    {"sender": "user", "text": f"O aluno não entendeu esta resposta:\n\n{prev}\n\nExplique em português."}
+                    {"sender": "user", "text": f"Sua resposta anterior ao aluno foi:\n\n{prev}\n\nTraduza para português."}
                 ]
             else:
                 api_messages = session.messages

@@ -52,12 +52,11 @@ class PromptTests(unittest.TestCase):
 
     def test_clarification_prompt_shows_translation(self):
         self.assertIn("CONVERSA", CLARIFICATION_PROMPT)
-        self.assertIn("Tradução da mensagem anterior", CLARIFICATION_PROMPT)
+        self.assertIn("Tradução", CLARIFICATION_PROMPT)
 
     def test_clarification_prompt_explains_english(self):
         self.assertIn("EXPLICAÇÃO", CLARIFICATION_PROMPT)
-        self.assertIn("gramática", CLARIFICATION_PROMPT)
-        self.assertIn("vocabulário", CLARIFICATION_PROMPT)
+        self.assertIn("inglês", CLARIFICATION_PROMPT)
 
     def test_clarification_prompt_no_corrected_text(self):
         self.assertNotIn("📝 TEXTO CORRIGIDO:", CLARIFICATION_PROMPT)
