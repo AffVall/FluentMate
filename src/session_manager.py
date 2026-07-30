@@ -86,7 +86,7 @@ class SessionManager:
             "active_id": self.active_id,
         }
         with open(SESSIONS_FILE, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+            json.dump(data, f, ensure_ascii=False)
 
     def create(self) -> Session:
         s = Session(id=str(datetime.now().timestamp()))
