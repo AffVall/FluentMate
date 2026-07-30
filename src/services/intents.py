@@ -78,7 +78,7 @@ RULES:
 - Explain what they mean in Portuguese
 - Explain any grammar structures used (tenses, conditionals, phrasal verbs, etc.)
 - Keep explanations short and clear
-- If the message was simple with no difficult words, write: "Essa mensagem é bem simples!"
+- If the message was simple with no difficult words, write: "Somente tradução aqui!"
 
 OUTPUT FORMAT:
 
