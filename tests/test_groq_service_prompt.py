@@ -50,8 +50,12 @@ class PromptTests(unittest.TestCase):
     def test_standard_prompt_forbids_extra_sections(self):
         self.assertIn("Only three top-level sections", STANDARD_PROMPT)
 
-    def test_clarification_prompt_is_portuguese_only(self):
-        self.assertIn("APENAS em português", CLARIFICATION_PROMPT)
+    def test_clarification_prompt_shows_english_first(self):
+        self.assertIn("MENSAGEM EM INGLÊS", CLARIFICATION_PROMPT)
+        self.assertIn("repita a frase em inglês", CLARIFICATION_PROMPT)
+
+    def test_clarification_prompt_explains_in_portuguese(self):
+        self.assertIn("EXPLICAÇÃO EM PORTUGUÊS", CLARIFICATION_PROMPT)
         self.assertIn("português", CLARIFICATION_PROMPT)
 
     def test_clarification_prompt_no_exercises(self):
