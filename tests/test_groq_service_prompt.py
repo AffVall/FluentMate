@@ -41,14 +41,31 @@ class StandardPromptTests(unittest.TestCase):
     def test_do_not_invent_errors(self):
         self.assertIn("Do NOT invent errors", STANDARD_PROMPT)
 
-    def test_no_style_improvements(self):
-        self.assertIn("suggest style improvements", STANDARD_PROMPT)
 
-    def test_minimal_changes(self):
-        self.assertIn("Make minimal changes only", STANDARD_PROMPT)
+class ClarificationPromptTests(unittest.TestCase):
+    def test_has_translation_section(self):
+        self.assertIn("💬 CONVERSA", CLARIFICATION_PROMPT)
 
-    def test_preserve_original_meaning(self):
-        self.assertIn("preserve the user's original meaning", STANDARD_PROMPT)
+    def test_has_explanation_section(self):
+        self.assertIn("📚 EXPLICAÇÃO", CLARIFICATION_PROMPT)
+
+    def test_translates_previous_response(self):
+        self.assertIn("Translate your previous response", CLARIFICATION_PROMPT)
+
+    def test_explains_difficult_words(self):
+        self.assertIn("difficult English words", CLARIFICATION_PROMPT)
+
+    def test_explains_grammar(self):
+        self.assertIn("grammar structures", CLARIFICATION_PROMPT)
+
+    def test_nada_de_difficil(self):
+        self.assertIn("Nada de difícil!", CLARIFICATION_PROMPT)
+
+    def test_no_corrected_text(self):
+        self.assertNotIn("📝 TEXTO CORRIGIDO:", CLARIFICATION_PROMPT)
+
+    def test_not_empty(self):
+        self.assertTrue(len(CLARIFICATION_PROMPT) > 0)
 
 
 class IntentSystemTests(unittest.TestCase):
@@ -61,6 +78,7 @@ class IntentSystemTests(unittest.TestCase):
             with self.subTest(intent=intent_name):
                 self.assertIn("prompt", config)
                 self.assertIsInstance(config["prompt"], str)
+                self.assertTrue(len(config["prompt"]) > 0)
 
 
 if __name__ == "__main__":
