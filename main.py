@@ -70,7 +70,7 @@ class Sidebar(ctk.CTkFrame):
 
         ctk.CTkLabel(
             header,
-            text="English Teacher",
+            text="FluentMate",
             font=ctk.CTkFont(size=20, weight="bold"),
             text_color=TEXT_PRIMARY,
         ).pack(anchor="w")
@@ -540,7 +540,7 @@ class EnglishTeacherApp(ctk.CTk):
 
     def __init__(self):
         super().__init__()
-        self.title("English Teacher")
+        self.title("FluentMate")
         self.geometry("1200x700")
         self.minsize(900, 600)
 

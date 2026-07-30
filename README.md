@@ -1,4 +1,4 @@
-# English Teacher
+# FluentMate
 
 Aplicativo desktop em Python para praticar inglês com ajuda de IA, com sessões de conversa, correções e explicações em português.
 

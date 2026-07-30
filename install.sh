@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== English Teacher - Instalação ==="
+echo "=== FluentMate - Instalação ==="
 echo ""
 
 echo "Criando ambiente virtual..."
