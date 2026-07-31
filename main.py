@@ -23,7 +23,6 @@ BG_MEDIUM = "#181825"
 BG_LIGHT = "#313244"
 HOVER = "#45475a"
 TEXT_PRIMARY = "#cdd6f4"
-TEXT_SECONDARY = "#a6adc8"
 TEXT_MUTED = "#6c7086"
 ACCENT = "#89b4fa"
 ACCENT_HOVER = "#74c7ec"
@@ -535,7 +534,7 @@ class ChatPanel(ctk.CTkFrame):
 # ============================================================
 # APLICAÇÃO PRINCIPAL
 # ============================================================
-class EnglishTeacherApp(ctk.CTk):
+class FluentMateApp(ctk.CTk):
     """Janela principal da aplicação."""
 
     def __init__(self):
@@ -603,7 +602,7 @@ class EnglishTeacherApp(ctk.CTk):
 # PONTO DE ENTRADA
 # ============================================================
 def main():
-    app = EnglishTeacherApp()
+    app = FluentMateApp()
     app.mainloop()
 
 

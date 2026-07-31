@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict
 
 # ============================================================
 # PROMPTS POR INTENÇÃO
@@ -86,7 +86,7 @@ OUTPUT FORMAT:
 [Exact translation of your previous response to Portuguese]
 
 📚 EXPLICAÇÃO:
-[Explanation of difficult words and grammar in Portuguese, or "Nada de difícil!" if simple]
+[Explanation of difficult words and grammar in Portuguese, or "Somente tradução aqui!" if simple]
 
 DO NOT:
 - Do NOT invent errors in your own text
